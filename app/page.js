@@ -62,7 +62,8 @@ const navLinks = [
 ];
 
 export default function Home() {
-  const [activeNavLink, setActiveNavLink] = useState(0);
+  const [activeNavLink, setActiveNavLink] = useState("home");
+  const [activeTab, setActiveTab] = useState(0);
   return (
     <main className="min-h-screen bg-black grid grid-cols-1 md:grid-cols-4">
       <div className="col-span-1 h-full flex flex-col items-start justify-start pt-2 px-10">
@@ -98,7 +99,30 @@ export default function Home() {
         </span>
       </div>
       <div className="col-span-2 border-x border-[#161616]">
-        <h2 className="text-white font-medium py-6">{activeNavLink}</h2>
+        <h2 className="text-white text-lg md:text-xl px-4 font-bold py-6">
+          {activeNavLink}
+        </h2>
+        <div className="items-center justify-center flex space-x-4 w-full text-white text-lg">
+          <span
+            onClick={() => setActiveTab(0)}
+            className={`${activeTab === 0 ? "active-tab" : "tab"}`}
+          >
+            For You
+          </span>
+          <span
+            onClick={() => setActiveTab(1)}
+            className={`${activeTab === 1 ? "active-tab" : "tab"}`}
+          >
+            Following
+          </span>
+        </div>
+        <div className="border-y border-[#161616] py-2">
+          <input
+            type="text"
+            placeholder="What is happening ?"
+            className="w-full py-2 px-2 bg-transparent placeholder:text-white/40"
+          />
+        </div>
       </div>
       <div className="col-span-1 "></div>
     </main>
