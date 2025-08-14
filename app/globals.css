@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 @layer components {
+  .post-button {
+    @apply rounded-full bg-[#1D9BF0] opacity-90 text-lg text-white py-3 px-4 hover:opacity-100 cursor-pointer;
+  }
   .tab {
     @apply cursor-pointer hover:bg-[#161616] px-2 py-3 w-full text-center
      relative;
   }
   .active-tab {
-    @apply tab bg-[#161616];
+    @apply cursor-pointer bg-[#161616] px-2 py-3 w-full text-center
+     relative ;
   }
 }
 

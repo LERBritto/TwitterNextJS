@@ -93,8 +93,8 @@ export default function Home() {
           // </Link>
         ))}
         <span className="w-full items-center justify-center flex mt-4">
-          <button className="rounded-full bg-[#1D9BF0] opacity-90 text-lg text-white w-full py-3 px-4 hover:opacity-100 cursor-pointer">
-            post
+          <button className="post-button w-full">
+            Post
           </button>
         </span>
       </div>
@@ -102,26 +102,23 @@ export default function Home() {
         <h2 className="text-white text-lg md:text-xl px-4 font-bold py-6">
           {activeNavLink}
         </h2>
-        <div className="items-center justify-center flex space-x-4 w-full text-white text-lg">
-          <span
-            onClick={() => setActiveTab(0)}
-            className={`${activeTab === 0 ? "active-tab" : "tab"}`}
-          >
+        <div className="items-center justify-center flex w-full text-white text-lg">
+          <span onClick={() => setActiveTab(0) } className={`${activeTab === 0 ? "active-tab" : "tab"}`}>
             For You
           </span>
-          <span
-            onClick={() => setActiveTab(1)}
-            className={`${activeTab === 1 ? "active-tab" : "tab"}`}
-          >
+          <span onClick={() => setActiveTab(1) } className={`${activeTab === 1 ? "active-tab" : "tab"}`}>
             Following
           </span>
         </div>
-        <div className="border-y border-[#161616] py-2">
+        <div className="border-y border-[#161616] py-2 w-full">
           <input
             type="text"
             placeholder="What is happening ?"
-            className="w-full py-2 px-2 bg-transparent placeholder:text-white/40"
+            className="w-full text-lg lg:text-xl py-6 px-4 bg-transparent text-white placeholder:text-white/40 outline-none"
           />
+          <span className="items-end justify-end flex pr-2">
+            <button className="post-button w-[4vw] py-2">Post</button>
+          </span>
         </div>
       </div>
       <div className="col-span-1 "></div>
