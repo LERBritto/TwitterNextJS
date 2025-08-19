@@ -8,7 +8,7 @@ import {
   useRecoilState,
   useRecoilValue,
 } from "recoil";
-import { SessionProvider } from "next-auth/react"
+import { SessionProvider } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
