@@ -15,9 +15,11 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <RecoilRoot>
-        <body className={inter.className}>{children}</body>
-      </RecoilRoot>
+      <SessionProvider>
+        <RecoilRoot>
+          <body className={inter.className}>{children}</body>
+        </RecoilRoot>
+      </SessionProvider>
     </html>
   );
 }
