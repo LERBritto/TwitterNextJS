@@ -121,7 +121,11 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <div className="col-span-1 "></div>
+      <div className="col-span-1 ">
+        <div className="border-y border-[#161616] py-2 w-full">
+          
+        </div>
+      </div>
     </main>
   );
 }
