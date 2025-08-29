@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import { BriefcaseIcon, CogIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
+import { addDoc } from "firebase/firestore";
 
 const navLinks = [
   {
@@ -64,6 +64,12 @@ const navLinks = [
 export default function Home() {
   const [activeNavLink, setActiveNavLink] = useState("home");
   const [activeTab, setActiveTab] = useState(0);
+  const {data: session} = useSession();
+  const testData = async () => {
+    await addDoc(doc(db, "users"), {
+      user: session.users,
+    })
+  }
   return (
     <main className="min-h-screen bg-black grid grid-cols-1 md:grid-cols-4">
       <div className="col-span-1 h-full flex flex-col items-start justify-start pt-2 px-10">

@@ -6,4 +6,4 @@ function signin() {
   return <div onClick={() => signIn("google")}>signin</div>
 }
 
-export default signin
+export default signin;
