@@ -1,9 +1,9 @@
+"use client"
+import { signOut } from 'next-auth/react'
 import React from 'react'
 
-const signout = () => {
-  return (
-    <div>signout</div>
-  )
+function signout() {
+  return <div onClick={() => signOut("google")}>signout</div>
 }
 
 export default signout

@@ -1,27 +1,30 @@
 "use client";
-import { BriefcaseIcon, CogIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import Link from "next/link";
+import { BellIcon, BriefcaseIcon, CheckBadgeIcon, GlobeAltIcon, HomeIcon, ListBulletIcon, PlusCircleIcon, UsersIcon } from "@heroicons/react/24/outline";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { addDoc } from "firebase/firestore";
+
 
 const navLinks = [
   {
     id: 0,
     title: "home",
     link: "/home",
-    icon: <CogIcon className="h-8 w-8 stroke-white" />,
+    icon: <HomeIcon className="h-8 w-8 stroke-white" />,
   },
   {
     id: 1,
     title: "explore",
     link: "/explore",
-    icon: <CogIcon className="h-8 w-8 stroke-white" />,
+    icon: <GlobeAltIcon className="h-8 w-8 stroke-white" />,
   },
   {
     id: 2,
     title: "notifications",
     link: "/notifications",
-    icon: <CogIcon className="h-8 w-8 stroke-white" />,
+    icon: <BellIcon className="h-8 w-8 stroke-white" />,
   },
   {
     id: 3,
@@ -33,31 +36,31 @@ const navLinks = [
     id: 4,
     title: "lists",
     link: "/lists",
-    icon: <CogIcon className="h-8 w-8 stroke-white" />,
+    icon: <ListBulletIcon className="h-8 w-8 stroke-white" />,
   },
   {
     id: 5,
     title: "communities",
     link: "/communities",
-    icon: <CogIcon className="h-8 w-8 stroke-white" />,
+    icon: <UsersIcon className="h-8 w-8 stroke-white" />,
   },
   {
     id: 6,
     title: "verified-Orgs",
     link: "/verified-Orgs",
-    icon: <CogIcon className="h-8 w-8 stroke-white" />,
+    icon: <CheckBadgeIcon className="h-8 w-8 stroke-white" />,
   },
   {
     id: 7,
     title: "profile",
     link: "/profile",
-    icon: <CogIcon className="h-8 w-8 stroke-white" />,
+    icon: <UsersIcon className="h-8 w-8 stroke-white" />,
   },
   {
     id: 8,
     title: "more",
     link: "/more",
-    icon: <CogIcon className="h-8 w-8 stroke-white" />,
+    icon: <PlusCircleIcon className="h-8 w-8 stroke-white" />,
   },
 ];
 
@@ -127,7 +130,11 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <div className="col-span-1 "></div>
+      <div className="col-span-1 ">
+        <div className="border-y border-[#161616] py-2 w-full">
+          
+        </div>
+      </div>
     </main>
   );
 }
